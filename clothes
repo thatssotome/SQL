@@ -1,0 +1,49 @@
+CREATE TABLE upbeat_store (id INTEGER PRIMARY KEY, material TEXT, clothing_kind TEXT, clothing_type 
+TEXT, color TEXT, price REAL); 
+
+INSERT INTO upbeat_store VALUES (1,"cotton", "Top","T-shirt", "BLUE", 10.99);
+
+INSERT INTO upbeat_store VALUES (2, "linen", "Top", "tank", "red", 
+11.99); 
+
+INSERT INTO upbeat_store VALUES (3, "silk", "top", "tank", "white",
+13.99);
+
+INSERT INTO upbeat_store VALUES (4, "cotton", "Top", "baby doll", "blue", 14.99);
+
+INSERT INTO upbeat_store VALUES (5, "silk", "Top", "portfolio T", "purple", 15.00); 
+
+INSERT INTO upbeat_store VALUES (6, "cotton", "dress", "tube", "red", 20.99); 
+
+INSERT INTO upbeat_store VALUES (7, "silk", "dress", "slipped", "red", 20.99);
+
+INSERT INTO upbeat_store VALUES (8, "silk", "dress", "slipped", "black", 20.99);
+
+INSERT INTO upbeat_store VALUES (9, "satin", "dress", "slipped", "black", 20.99); 
+
+INSERT INTO upbeat_store VALUES (10, "leather", "skirt", "mini", "black", 15.99);
+
+INSERT INTO upbeat_store VALUES (11, "leather", "pants", "skinny", "black", 30.99);
+
+INSERT INTO upbeat_store VALUES (12, "jeans", "pants", "boot cut", "light-wash", 25.99);
+
+INSERT INTO upbeat_store VALUES (13, "jeans", "pants", "skinny", "black", 25.99); 
+
+INSERT INTO upbeat_store VALUES (14, "jeans", "pants", "skinny", "dark wash", 25.99);
+
+INSERT INTO upbeat_store VALUES (15, "jeans", "pants", "skinny", "holes", 35.99);
+
+
+SELECT * FROM upbeat_store;
+
+SELECT SUM(price) FROM upbeat_store;
+
+SELECT MAX(price) FROM upbeat_store;
+
+SELECT material, MAX(price) FROM upbeat_store GROUP BY material;
+
+SELECT material, clothing_kind, color FROM upbeat_store;
+
+SELECT * FROM upbeat_store WHERE material='silk';
+
+
